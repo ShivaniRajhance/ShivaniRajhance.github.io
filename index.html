@@ -89,9 +89,10 @@ code{font-family:var(--font-mono);font-size:.82em;background:var(--surface-2);pa
 }
 
 section.block{padding-block:clamp(3.5rem,8vw,6rem);border-top:1px solid var(--rule)}
-.sec-head{display:grid;gap:.6rem;margin-bottom:clamp(1.8rem,4vw,2.8rem);max-width:46rem}
+.sec-head{display:grid;gap:.6rem;margin-bottom:clamp(1.8rem,4vw,2.8rem)}
 .sec-head h2{font-stretch:100%;font-weight:620;font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.12;letter-spacing:-.012em}
-.sec-head p{color:var(--ink-2);font-size:1.06rem}
+.sec-head p{color:var(--ink-2);font-size:1.06rem;text-wrap:pretty}
+.sec-head .eyebrow{font-size:.72rem;color:var(--leaf)}
 h3.sub{font-stretch:100%;font-weight:600;font-size:1.3rem;letter-spacing:-.01em;margin-bottom:1rem}
 
 .glance{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(2.5rem,5vw,3.5rem);border-top:2px solid var(--ink)}
@@ -155,7 +156,7 @@ h4.mini{font-stretch:100%;font-weight:600;font-size:1.05rem;margin-top:1.2rem}
 }
 .reel-cap{margin-top:.8rem;font-size:.86rem;color:var(--muted);max-width:52rem}
 .try-row{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.2rem;margin-top:1.6rem}
-.try-row p{font-size:.92rem;color:var(--ink-2);max-width:34rem}
+.try-row p{font-size:.92rem;color:var(--ink-2)}
 .demo-dialog{width:min(1180px,calc(100vw - 24px));max-width:none;max-height:calc(100dvh - 24px);padding:0;border:1px solid var(--rule);border-radius:18px;background:var(--paper);color:var(--ink);overflow:auto;overscroll-behavior:contain}
 .demo-dialog::backdrop{background:rgba(6,12,9,.74);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
 .dlg-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.75rem 1.1rem;background:var(--paper);border-bottom:1px solid var(--rule)}
@@ -252,10 +253,10 @@ pre.code .lang{display:block;font-size:.62rem;letter-spacing:.08em;text-transfor
 .feature-part{margin-top:clamp(3rem,6vw,4.5rem)}
 
 .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
-.proj.current{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1rem,3vw,2.4rem);align-items:center;background:var(--leaf-soft);border-color:var(--leaf)}
+.proj.current{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:calc(3.7rem + 2px);align-items:center;background:var(--leaf-soft);border-color:var(--leaf)}
 .cur-head{display:flex;flex-direction:column;gap:.6rem;min-width:0}
 .badge-now{display:inline-block;margin-right:.5rem;padding:.12rem .5rem;border-radius:999px;background:var(--leaf);color:var(--paper);font-weight:500}
-@media (max-width:900px){.proj.current{grid-template-columns:1fr;align-items:start}}
+@media (max-width:900px){.proj.current{grid-template-columns:1fr;align-items:start;gap:1rem}}
 .proj.wide{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(1.2rem,3vw,2.2rem);align-items:center;padding:clamp(.9rem,2.2vw,1.4rem)}
 .dive-media{position:relative;margin:0;border-radius:10px;overflow:hidden;background:#000;min-width:0}
 .dive-media video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
@@ -321,8 +322,8 @@ pre.code .lang{display:block;font-size:.62rem;letter-spacing:.08em;text-transfor
 
 .contact{background:var(--ink);color:var(--paper)}
 .contact .wrap{padding-block:clamp(3.5rem,8vw,6rem)}
-.contact h2{color:var(--paper);font-stretch:100%;font-weight:650;font-size:clamp(1.7rem,3.8vw,2.7rem);line-height:1.12;letter-spacing:-.012em;max-width:16em}
-.contact p.sub{margin-top:1rem;max-width:38rem;color:color-mix(in srgb, var(--paper) 78%, transparent)}
+.contact h2{color:var(--paper);font-stretch:100%;font-weight:650;font-size:clamp(1.7rem,3.8vw,2.7rem);line-height:1.12;letter-spacing:-.012em}
+.contact p.sub{margin-top:1rem;max-width:40rem;text-wrap:pretty;color:color-mix(in srgb, var(--paper) 78%, transparent)}
 .contact-rows{display:grid;gap:.75rem;margin-top:2rem;max-width:40rem}
 .crow{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;padding:.9rem 1.1rem;border-radius:12px;border:1px solid color-mix(in srgb, var(--paper) 22%, transparent)}
 .crow .lbl{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb, var(--paper) 62%, transparent);width:5.5rem}
@@ -330,6 +331,7 @@ pre.code .lang{display:block;font-size:.62rem;letter-spacing:.08em;text-transfor
 .crow a{color:var(--paper)}
 .crow button{font:600 .8rem/1 var(--font-body);padding:.5rem .8rem;border-radius:999px;border:1.5px solid var(--paper);background:transparent;color:var(--paper);cursor:pointer}
 .crow button:hover{background:var(--paper);color:var(--ink)}
+@media (max-width:560px){.crow{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.35rem .8rem}.crow .lbl{grid-column:1 / -1;width:auto}.crow .val{font-size:.98rem;overflow-wrap:normal;word-break:normal}.crow .val:only-of-type{grid-column:1 / -1}}
 footer.foot{background:var(--ink);color:color-mix(in srgb, var(--paper) 60%, transparent);font-size:.8rem;border-top:1px solid color-mix(in srgb, var(--paper) 15%, transparent)}
 footer.foot .wrap{padding-block:1.2rem 1.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem}
 </style>
@@ -472,7 +474,7 @@ footer.foot .wrap{padding-block:1.2rem 1.6rem;display:flex;flex-wrap:wrap;justif
 
       <div class="try-row">
         <button type="button" class="btn primary" id="open-demo" aria-haspopup="dialog">Try it in your browser</button>
-        <p>No headset? Try a simplified browser version of the planting part. It opens in a pop-up.</p>
+        <p>No headset? Try a simplified browser version of the planting part. It opens in a pop&#8209;up.</p>
       </div>
       </article>
 
