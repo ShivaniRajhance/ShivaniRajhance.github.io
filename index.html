@@ -252,6 +252,10 @@ pre.code .lang{display:block;font-size:.62rem;letter-spacing:.08em;text-transfor
 .feature-part{margin-top:clamp(3rem,6vw,4.5rem)}
 
 .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.proj.current{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1rem,3vw,2.4rem);align-items:center;background:var(--leaf-soft);border-color:var(--leaf)}
+.cur-head{display:flex;flex-direction:column;gap:.6rem;min-width:0}
+.badge-now{display:inline-block;margin-right:.5rem;padding:.12rem .5rem;border-radius:999px;background:var(--leaf);color:var(--paper);font-weight:500}
+@media (max-width:900px){.proj.current{grid-template-columns:1fr;align-items:start}}
 .proj.wide{grid-column:1 / -1;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(1.2rem,3vw,2.2rem);align-items:center;padding:clamp(.9rem,2.2vw,1.4rem)}
 .dive-media{position:relative;margin:0;border-radius:10px;overflow:hidden;background:#000;min-width:0}
 .dive-media video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
@@ -350,7 +354,7 @@ footer.foot .wrap{padding-block:1.2rem 1.6rem;display:flex;flex-wrap:wrap;justif
         <span class="avail">Open to working-student roles in XR &amp; Unity</span>
         <h1>Shivani Rajhance</h1>
         <p class="role">XR / Unity Developer · M.Sc. student in Weimar</p>
-        <p class="lede">I'm doing my Master's at Bauhaus-Universität Weimar, and most of my time goes into building VR in Unity and C#. So far I've worked on two multi-user VR projects, mostly on interaction, locomotion, networking and the look of the environment. Before my Master's, I spent four years at Infosys in Pune looking after production Linux servers, which taught me to plan carefully and work to deadlines.</p>
+        <p class="lede">I'm doing my Master's at Bauhaus-Universität Weimar, and most of my time goes into building VR in Unity and C#. So far I've worked on two multi-user VR projects, mostly on interaction, locomotion, networking and the look of the environment, and I've just started a new one in mixed reality. Before my Master's, I spent four years at Infosys in Pune looking after production Linux servers, which taught me to plan carefully and work to deadlines.</p>
         <div class="hero-actions">
           <a class="btn primary" href="#projects">See my projects</a>
           <a class="btn" href="#experience">Experience</a>
@@ -381,11 +385,11 @@ footer.foot .wrap{padding-block:1.2rem 1.6rem;display:flex;flex-wrap:wrap;justif
       <div class="sec-head">
         <p class="eyebrow">Projects</p>
         <h2>VR, Computer Vision and Web Development</h2>
-        <p>The two VR projects from my Master's come first, followed by earlier work from my Bachelor's.</p>
+        <p>Research projects in virtual and mixed reality from my Master's at Bauhaus-Universität Weimar, along with earlier work from my Bachelor's studies.</p>
       </div>
 
       <article class="featured" id="green-jena">
-        <p class="eyebrow">Featured · Immersive Decision Theatre 2 · Research project</p>
+        <p class="eyebrow">Featured · Immersive Decision Theatre 2 · University research project</p>
         <h3 class="feature-title" style="margin-top:.7rem">Green Jena<span class="k" aria-hidden="true"></span></h3>
         <div class="feature-intro">
           <div>
@@ -474,6 +478,19 @@ footer.foot .wrap{padding-block:1.2rem 1.6rem;display:flex;flex-wrap:wrap;justif
 
       <div class="sec-head" style="margin-top:clamp(3.5rem,7vw,5rem);margin-bottom:1.6rem"><p class="eyebrow">More projects</p></div>
       <div class="projects">
+        <article class="proj current">
+          <div class="cur-head">
+            <span class="when"><span class="badge-now">In progress</span>10/2026 – present · Mixed reality · University research project</span>
+            <h3>Agents in Mixed Reality</h3>
+            <p>A prototype for a hybrid museum, where virtual agents guide visitors and teach them about the exhibits.</p>
+            <ul class="chips" aria-label="Technology"><li>Unity 6</li><li>C#</li><li>URP</li><li>Netcode for GameObjects</li><li>VRSYS</li><li>Meta Quest 3</li></ul>
+          </div>
+          <ul class="cur-list">
+            <li>Developing the concept for the immersive exhibition space.</li>
+            <li>Designing, building and iterating on the interactions with the virtual exhibits and the agents' behaviour.</li>
+            <li>Working on turn taking, figuring out which object a visitor is referring to, and spatial scene understanding when several people interact with the agents at once.</li>
+          </ul>
+        </article>
         <article class="proj xr wide">
           <figure class="dive-media">
             <video id="dive" src="media/unity-dive-reel.mp4" poster="media/unity-dive-poster.webp" muted loop playsinline controls preload="metadata" aria-label="Unity Dive recorded in a VR headset: teleporting across a seabed covered in waste, reef life, and a second player with a name tag in the same scene."></video>
