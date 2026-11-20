@@ -83,6 +83,8 @@ html.rv [data-reveal="3"]{transition-delay:.16s}
 .nav-links a:hover{color:var(--ink)}
 .nav-links a:hover::after,.nav-links a.here::after{transform:scaleX(1)}
 .nav .btn{padding:.6rem 1rem;font-size:.88rem}
+.nav-btns{display:flex;gap:.5rem;align-items:center}
+@media (max-width:420px){.nav .btn{padding:.55rem .8rem;font-size:.82rem}}
 @media (max-width:900px){.nav-links{display:none}}
 
 /* hero */
@@ -426,7 +428,10 @@ footer.foot .wrap{padding-block:1.2rem 1.6rem;display:flex;flex-wrap:wrap;justif
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
     </ul>
-    <a class="btn solid" href="#contact">Contact</a>
+    <div class="nav-btns">
+      <a class="btn" href="media/Shivani_Rajhance_CV.pdf" download="Shivani_Rajhance_CV.pdf">Resume <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn solid" href="#contact">Contact</a>
+    </div>
   </div>
 </header>
 
@@ -445,6 +450,7 @@ footer.foot .wrap{padding-block:1.2rem 1.6rem;display:flex;flex-wrap:wrap;justif
         </ul>
         <div class="hero-actions">
           <a class="btn solid" href="#projects">See my projects</a>
+          <a class="btn" href="media/Shivani_Rajhance_CV.pdf" download="Shivani_Rajhance_CV.pdf">Resume <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v9m0 0L4.5 7.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="btn" href="#contact">Email me</a>
           <a class="btn" href="https://www.linkedin.com/in/shivanirajhance/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
